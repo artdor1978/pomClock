@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Main from "./Main";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Main from './Main';
 // import "./index.css";
-ReactDOM.render(<Main />, document.getElementById("root"));
+ReactDOM.render(<Main />, document.getElementById('root'));
 if (module.hot) {
-	module.hot.accept();
+  module.hot.accept();
 }
