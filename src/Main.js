@@ -1,19 +1,29 @@
-import React, { useState } from 'react';
-import './Main.css';
+import React, { useState } from "react";
+import "./Main.css";
 
 const Stringify = props => <div className="letterStyle" {...props} />;
 const Counter = props => <div className="counter" {...props} />;
-
-function Main() {
-  const [count, setCount] = useState(0);
+const Clickers = props => {
   return (
-    <div>
-      <Stringify id="dddd">BREAK</Stringify>
-      <Counter>
-        <div>{count}</div>
-        <button onClick={() => setCount(count - 1)}>-</button>
-        <button onClick={() => setCount(count + 1)}>+</button>
-      </Counter>
+    <div className="clickers" {...props}>
+    {props.children}
+      <div className="clickersLine"></div>
+    </div>
+  );
+};
+
+function Main({time}) {
+  const [count, setCount] = useState(time);
+  return (
+    <div id="slider">
+      <Stringify id="break-label">Break Length</Stringify>
+      <Clickers id="break-increment" onClick={() => setCount(count + 1)}>
+        +
+      </Clickers>
+      <Clickers id="break-decrement" onClick={() => setCount(count - 1)}>
+        -
+      </Clickers>
+            <Counter>{count}</Counter>
     </div>
   );
 }
