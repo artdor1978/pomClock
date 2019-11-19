@@ -1,18 +1,15 @@
-import React from 'react';
-import Main from './Main';
+import React from "react";
+import Main from "./Main";
 
 function Sliders() {
-	const breakParam = [5,"break"];
-	console.log(breakParam[0]);
-	const sessionTime = 25;
+	const breakParam = { time: 5, labelParam: "break" };
+	const sessionParam = { time: 25, labelParam: "session" };
 	return (
 		<div>
 			<Main param={breakParam} />
-			
+			<Main param={sessionParam} />
 		</div>
 	);
 }
 
 export default Sliders;
-
-//<Main time={sessionTime} />

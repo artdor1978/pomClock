@@ -1,19 +1,19 @@
 body {
 	font-family: "Mitr", sans-serif;
+	color: #404241;
 }
 .letterStyle {
-	padding: 10px;
-	margin: 10px;
-	color: #333;
+	margin-top: 20px;
 	display: inline-block;
 	font-size: 32px;
 	text-align: left;
 	grid-column: 1 / 4;
+	text-transform: capitalize;
 }
 #slider {
 	display: grid;
 	grid-template-columns: 40% 40% 20%;
-	grid-template-rows: auto 20px;
+	grid-template-rows: auto auto;
 }
 .counter {
 	background: #404241;
@@ -28,17 +28,13 @@ body {
 }
 .clickers {
 	width: 100%;
-	padding: 10px;
-}
-.clickersLine {
-	height: 4px;
-	width: 100%;
-	background-color: black;
-}
-.clickers:hover .clickersLine {
-	cursor: grab;
-	background-color: #f16149;
+	padding: 5px;
+	vertical-align: middle;
+	border: 1px solid #404241;
+	vertical-align: middle;
+	text-align: center;
 }
 .clickers:hover {
 	cursor: grab;
+	background-color: #f16149;
 }
